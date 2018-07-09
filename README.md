@@ -1,21 +1,8 @@
-> This package is not maintained anymore, use [zetoff:accounts-material-ui](https://atmospherejs.com/zetoff/accounts-material-ui) instead. // T
+# React Accounts UI for using Material-UI
 
-# React Accounts UI for Meteor 1.3 - Material UI
+[**Demo Here**](https://zetoff-accounts-material-ui-demo-dtegtmwdsl.now.sh)
 
-Current version 1.1.0
-
-![Accounts UI for Meteor 1.3 - Material UI](https://raw.githubusercontent.com/studiointeract/accounts-material/master/accounts-material.png)
-
-## Features
-
-1. **[Easy to use](https://github.com/studiointeract/react-accounts-ui#using-react-accounts-ui)**, mixing the ideas of useraccounts configuration and accounts-ui that everyone already knows and loves.
-3. **[Components](https://github.com/studiointeract/react-accounts-ui#components-available)** are everywhere, and extensible by replacing them on Accounts.ui.
-4. **[Basic routing](https://github.com/studiointeract/react-accounts-ui#configuration)** included, redirections when the user clicks a link in an email or when signing in or out.
-5. **[Unstyled](https://github.com/studiointeract/react-accounts-ui#styling)** is the default, no CSS included.
-6. **[No password](https://github.com/studiointeract/react-accounts-ui#no-password-required)** sign up and sign in are included.
-7. **[Extra fields](https://github.com/studiointeract/react-accounts-ui#extra-fields)** is now supported.
-8. **[Server Side Rendering](https://github.com/studiointeract/react-accounts-ui#server-side-rendering)** are supported, trough FlowRouter (SSR).
-9. **[Extending](https://github.com/studiointeract/react-accounts-ui#create-your-own-styled-version)** to make your own custom form, for your app, or as a package, all components can be extended and customized.
+![React Accounts UI for using Material-UI](https://raw.githubusercontent.com/Zetoff/accounts-material-ui/master/accounts-material-ui.png)
 
 ### Based on and extends std:accounts-ui
 
@@ -23,7 +10,13 @@ Current version 1.1.0
 
 ## Installation
 
-`meteor add std:accounts-material`
+`meteor add zetoff:accounts-material-ui`
+
+### Dependencies
+
+In addition to React this package also depends on [material-ui](http://www.material-ui.com/). So make sure it is installed:
+
+`meteor npm install -S material-ui`
 
 ## Configuration
 
@@ -34,13 +27,13 @@ We support the standard [configuration in the account-ui package](http://docs.me
 ### Example setup (Meteor 1.3)
 
 `meteor add accounts-password`  
-`meteor add materialize:materialize`  
-`meteor add std:accounts-material`
+`meteor add zetoff:accounts-material-ui`
+`meteor npm install -S material-ui`
 
 ```javascript
 
 import React from 'react';
-import { Accounts } from 'meteor/std:accounts-material';
+import { Accounts } from 'meteor/std:accounts-ui';
 
 Accounts.ui.config({
   passwordSignupFields: 'NO_PASSWORD',
@@ -56,13 +49,12 @@ if (Meteor.isClient) {
 ## Example setup using FlowRouter (Meteor 1.3)
 
 `meteor add accounts-password`  
-`meteor add materialize:materialize`  
-`meteor add std:accounts-material`  
-`meteor add kadira:flow-router-ssr`
+`meteor add zetoff:accounts-material-ui`
+`meteor npm install -S material-ui`
 
 ```javascript
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
-import { Accounts } from 'meteor/std:accounts-material';
+import { Accounts } from 'meteor/std:accounts-ui';
 import React from 'react';
 
 Accounts.ui.config({
@@ -83,4 +75,4 @@ FlowRouter.route("/login", {
 
 ## Credits
 
-Made by the [creative folks at Studio Interact](http://studiointeract.com)
+Made by Zetoff
