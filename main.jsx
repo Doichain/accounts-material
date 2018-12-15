@@ -80,8 +80,8 @@ class Button extends Accounts.ui.Button {
 					? <FontIcon className={`fa ${icon}`}/>
 					: null}
 					className={className}
-					onTouchTap={onClick}
 					disabled={disabled}
+                    onClick={ onClick }
 					style={{marginRight: '5px'}}
 					/>
 			)
@@ -94,8 +94,8 @@ class Button extends Accounts.ui.Button {
 					primary={true}
 					type={type}
 					className={className}
-					onTouchTap={onClick}
 					disabled={disabled}
+                    onClick={ onClick }
 					style={{marginRight: '5px'}}
 					/>
 			)
@@ -145,9 +145,7 @@ class Field extends Accounts.ui.Field {
 				required={required
 				? "required"
 				: ""}
-				autoCapitalize={type == 'email'
-				? 'none'
-				: false}
+				autoCapitalize={type == 'email'? "false": "true"}
 				autoCorrect="off"/>)
 			: null;
 	}
@@ -171,7 +169,6 @@ class SocialButtons extends Accounts.ui.SocialButtons {
 								key={i}
 								label={label}
 								type={type}
-								onTouchTap={onClick}
 								disabled={disabled}
 								className={serviceClass.length > 0
 								? `${serviceClass}`
@@ -247,7 +244,6 @@ class FormMessage extends Accounts.ui.FormMessage {
         bodyStyle={bodyStyle}
         action="OK"
         autoHideDuration={4000}
-        onActionTouchTap={this.handleRequestClose.bind(this)}
         onRequestClose={this.handleRequestClose.bind(this)}/>)
       : null;
   }
