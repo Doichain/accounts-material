@@ -1,8 +1,8 @@
 import React from 'react';
 import {Accounts, STATES} from './fix.js'; // TODO: back to normal once std:accounts-ui is fixed
-import {RaisedButton, FlatButton, FontIcon, TextField, Divider, Snackbar} from 'material-ui';
+import {RaisedButton, FlatButton, FontIcon, TextField, Divider, Snackbar} from '@material-ui/core';
 import {socialButtonsColors, socialButtonIcons} from './social_buttons_config';
-import {green500, red500, yellow600, lightBlue600} from 'material-ui/styles/colors';
+import {green500, red500, yellow600, lightBlue600} from '@material-ui/core/colors';
 
 /**
  * Form.propTypes = {
